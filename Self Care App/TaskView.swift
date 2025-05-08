@@ -30,27 +30,27 @@ struct TaskView: View {
                 ZStack {
                     // Title
                     Text("My Tasks")
-                        .font(.custom("Pixelated Elegance", size: 42))
+                        .font(.custom("Pixelated Elegance", size: 40))
                         .shadow(color: .black.opacity(1), radius: 0.5, x: 1, y: 1)
                         .foregroundColor(.black)
                         .offset(x: 3, y: 3)
                     Text("My Tasks")
-                        .font(.custom("Pixelated Elegance", size: 42))
+                        .font(.custom("Pixelated Elegance", size: 40))
                         .shadow(color: .black.opacity(1), radius: 0.5, x: 1, y: 1)
                         .foregroundColor(.black)
                         .offset(x: -3, y: -3)
                     Text("My Tasks")
-                        .font(.custom("Pixelated Elegance", size: 42))
+                        .font(.custom("Pixelated Elegance", size: 40))
                         .shadow(color: .black.opacity(1), radius: 0.5, x: 1, y: 1)
                         .foregroundColor(.black)
                         .offset(x: -3, y: 3)
                     Text("My Tasks")
-                        .font(.custom("Pixelated Elegance", size: 42))
+                        .font(.custom("Pixelated Elegance", size: 40))
                         .shadow(color: .black.opacity(1), radius: 0.5, x: 1, y: 1)
                         .foregroundColor(.black)
                         .offset(x: 3, y: -3)
                     Text("My Tasks")
-                        .font(.custom("Pixelated Elegance", size: 42))
+                        .font(.custom("Pixelated Elegance", size: 40))
                         .shadow(color: .black.opacity(1), radius: 0.5, x: 1, y: 1)
                         .foregroundColor(Color(hue: 0.278, saturation: 0.709, brightness: 0.718))
                 }
@@ -64,12 +64,12 @@ struct TaskView: View {
                         ForEach($task) { $item in // each task can be changed (if checked)
                             HStack { // horizontal so check box is next to task
                                 Text(item.text) // shows task name
-                                    .font(.custom("Pixelated Elegance", size: 20))
+                                    .font(.custom("Pixelated Elegance", size: 18))
                                     .foregroundColor(.black)
                                 Spacer() // space sapart task and check box
                                 Button(action: {item.isChecked.toggle()}) {
                                     // when task is checked on or off, isChecked swaps
-                                    Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
+                                    Image(systemName: item.isChecked ? "circle.fill" : "circle")
                                     // if task is checked off (True), circle goes green and checked, otherwise gray (False)
                                         .foregroundColor(item.isChecked ? .green : .gray)
                                         // if isChecked is True, circle is green, gray if False
